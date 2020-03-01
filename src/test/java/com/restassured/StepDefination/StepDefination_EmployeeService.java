@@ -50,7 +50,7 @@ public class StepDefination_EmployeeService {
 
 	@Then("^the employee is added in the system$")
 	public void the_employee_is_added_in_the_system() {
-		response.then().statusCode(201);
+		response.then().statusCode(200);
 		Assert.assertEquals(OPERATION_SUCCESS,response.jsonPath().get("SuccessCode").toString().trim());
 		Assert.assertEquals(OPERATION_COMPLETED_SUCCESSFULLY,response.jsonPath().get("Message").toString().trim());
 	}
